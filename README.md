@@ -11,13 +11,23 @@
 
 ### What's in these repos
 
-Hands-on labs that apply AI agents to infrastructure operations, each built end to end as code:
+Nine labs, each built end to end as code and each ending in a test that can fail. The common thread is that the claim gets checked rather than asserted:
 
-- Terraform-defined landing zone for hosting AI agents on Azure
-- Multi-agent ops copilot on Azure AI Foundry, connected to real systems over MCP
-- Governed Copilot Studio agent on Power Platform, and the pro-code vs low-code trade-off behind it
-- Self-healing AIOps with the numbers that matter: MTTR, token spend, cost saved
+**Proving a control actually holds**
+- [least-privilege-proven](https://github.com/zuqdah/least-privilege-proven) — RBAC in Terraform, then every identity signs in and attempts what it should be refused
+- [entra-cutover-without-lockout](https://github.com/zuqdah/entra-cutover-without-lockout) — Conditional Access deployed report-only and evaluated against a declared matrix of sign-ins before anything is enforced
+- [integration-that-survives-failure](https://github.com/zuqdah/integration-that-survives-failure) — Service Bus put through duplicate delivery, poison messages, racing consumers, and replay
 
-Every lab ships with an architecture diagram, its infrastructure-as-code, and a write-up of what was proven. Published labs also appear on [ziyaduqdah.com](https://ziyaduqdah.com/#labs).
+**Migration and modernisation**
+- [sql-migration-with-rollback](https://github.com/zuqdah/sql-migration-with-rollback) — SQL Server to Azure SQL behind a pre-flight gate, parity proven by content checksum, rollback restored and verified
+- [windows-baseline-automation](https://github.com/zuqdah/windows-baseline-automation) — legacy PowerShell turned into a tested module with `-WhatIf` and proven idempotence
+
+**AI agents in operations**
+- [azure-agent-landing-zone](https://github.com/zuqdah/azure-agent-landing-zone) — Terraform landing zone for hosting agents, Container Apps behind APIM with OIDC
+- [agentic-ops-copilot](https://github.com/zuqdah/agentic-ops-copilot) — multi-agent ops copilot on Azure AI Foundry, wired to real systems over MCP with approval-gated writes
+- [self-healing-aiops](https://github.com/zuqdah/self-healing-aiops) — alert to diagnosis to a policy decision to a verified fix, reported in MTTR and cost
+- [copilot-studio-alm](https://github.com/zuqdah/copilot-studio-alm) — a Copilot Studio agent treated as source, promoted dev to prod with drift detection
+
+Each ships its infrastructure-as-code, its tests, and a write-up of what was proven — including the bugs the build found in itself. Every one is deployed manually, verified against live Azure, and torn down the same day. Published labs also appear on [ziyaduqdah.com](https://ziyaduqdah.com/#labs).
 
 📫 [ziyad@ziyaduqdah.com](mailto:ziyad@ziyaduqdah.com)
