@@ -11,12 +11,15 @@
 
 ### What's in these repos
 
-Nine labs, each built end to end as code and each ending in a test that can fail. The common thread is that the claim gets checked rather than asserted:
+Ten labs, each built end to end as code and each ending in a test that can fail. The common thread is that the claim gets checked rather than asserted:
 
 **Proving a control actually holds**
 - [least-privilege-proven](https://github.com/zuqdah/least-privilege-proven) — RBAC in Terraform, then every identity signs in and attempts what it should be refused
 - [entra-cutover-without-lockout](https://github.com/zuqdah/entra-cutover-without-lockout) — Conditional Access deployed report-only and evaluated against a declared matrix of sign-ins before anything is enforced
 - [integration-that-survives-failure](https://github.com/zuqdah/integration-that-survives-failure) — Service Bus put through duplicate delivery, poison messages, racing consumers, and replay
+
+**Resilience under measurement**
+- [disaster-recovery-actually-failed-over](https://github.com/zuqdah/disaster-recovery-actually-failed-over) — an Azure SQL estate failed over between regions for real, with recovery time measured from the first failed write and data loss counted by comparing acknowledged writes, then graded against the objectives the plan claims
 
 **Migration and modernisation**
 - [sql-migration-with-rollback](https://github.com/zuqdah/sql-migration-with-rollback) — SQL Server to Azure SQL behind a pre-flight gate, parity proven by content checksum, rollback restored and verified
