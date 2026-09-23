@@ -11,7 +11,7 @@
 
 ### What's in these repos
 
-Ten labs, each built end to end as code and each ending in a test that can fail. The common thread is that the claim gets checked rather than asserted:
+Eleven labs, each built end to end as code and each ending in a test that can fail. The common thread is that the claim gets checked rather than asserted:
 
 **Proving a control actually holds**
 - [least-privilege-proven](https://github.com/zuqdah/least-privilege-proven) — RBAC in Terraform, then every identity signs in and attempts what it should be refused
@@ -23,6 +23,7 @@ Ten labs, each built end to end as code and each ending in a test that can fail.
 
 **Migration and modernisation**
 - [sql-migration-with-rollback](https://github.com/zuqdah/sql-migration-with-rollback) — SQL Server to Azure SQL behind a pre-flight gate, parity proven by content checksum, rollback restored and verified
+- [before-the-first-sync](https://github.com/zuqdah/before-the-first-sync) — an Active Directory forest promoted from scratch and assessed against what Entra will accept, including the OU filter change that deletes people in the cloud rather than disabling them
 - [windows-baseline-automation](https://github.com/zuqdah/windows-baseline-automation) — legacy PowerShell turned into a tested module with `-WhatIf` and proven idempotence
 
 **AI agents in operations**
