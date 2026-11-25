@@ -12,6 +12,7 @@ Labs, each built end to end as code and each ending in a test that can fail. The
 - [azure-agent-landing-zone](https://github.com/zuqdah/azure-agent-landing-zone) — a Terraform landing zone deployed by GitHub Actions with no stored cloud credentials; every hop on managed identity, spend bounded by design
 - [entra-cutover-without-lockout](https://github.com/zuqdah/entra-cutover-without-lockout) — Conditional Access evaluated against a declared sign-in matrix before enforcement: 7 of 7 scenarios as declared, 0 lockouts
 - [least-privilege-proven](https://github.com/zuqdah/least-privilege-proven) — RBAC in Terraform, then each identity signs in and attempts what it must not; the pipeline fails if anything succeeds
+- [the-upgrade-succeeded](https://github.com/zuqdah/the-upgrade-succeeded) — an AKS upgrade that Azure reported as Succeeded while 181 requests failed in two 30-second outages; the same upgrade with the manifest fixed: zero failures
 
 **Migrations & cutover**
 - [sql-migration-with-rollback](https://github.com/zuqdah/sql-migration-with-rollback) — refuses a source that is not migratable, proves parity by content checksum rather than row count, and restores the rollback to show it works
